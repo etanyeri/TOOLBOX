@@ -52,7 +52,7 @@ def connect_database(connection_name, schema):
 #SAVE SOURCE TABLENAMES TO A VARIABLE: EX: POSTGRES 
 #-------------------------------------------------------------------------------------------------------------------
 #Update the connection_name variable if needed
-connection_name_postgresfrontend="reinsurance-frontend-dev" #str(input('Enter the SOURCE connection name from the credentials variable: '))
+connection_name_postgresfrontend="re-frontend-dev" #str(input('Enter the SOURCE connection name from the credentials variable: '))
 schema_postgresfrontend="public" #str(input('Enter the SOURCE schema  name you want to connect: '))
 engine_pg = connect_database(connection_name=connection_name_postgresfrontend, schema=schema_postgresfrontend)
 #Identify the table names in the default schema
@@ -69,7 +69,7 @@ print("Here are the tables in the schema:\n")
 tables_to_replicate
 
 #%%
-path_files = "../DBT_PROJECTS/aw_dbt/models/staging/reinsurance/facts/"
+path_files = "../DBT_PROJECTS/project_dbt/models/staging/rein/facts/"
 assert os.path.exists(path_files)
 
 #%%
@@ -95,7 +95,7 @@ FROM final
 # %%
 for table_name in tables_to_replicate:
     # Read in the file
-    with open(path_files+'stg_Reinsurance_'+table_name+'.sql', 'w') as file :
+    with open(path_files+'stg_Rein_'+table_name+'.sql', 'w') as file :
         file.write(pattern)
 
 # %%

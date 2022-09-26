@@ -82,8 +82,8 @@ pd.read_sql_query(sql=query_test_connection,con=engine_destination)
 
 
 #%%
-file_path = f'../data/outputs/ingested_schema_tables_exports/active_admin_comments.csv'
-table_name = 'active_admin_comments'
+file_path = f'../data/outputs/ingested_schema_tables_exports/active_comments.csv'
+table_name = 'active_comments'
 pd.read_csv(file_path)
 #%%
 try:

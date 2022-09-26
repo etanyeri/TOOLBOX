@@ -120,7 +120,7 @@ pd.read_sql_query(sql=query_test_connection,con=engine_destination)
 
 #Option 2:
 #________
-# from variables.phoenix_analytics import table_names_reinsurance_redshift as tables_to_replicate
+# from variables.phoenix_analytics import table_names_rein_redshift as tables_to_replicate
 #-------------------------------------------------------------------------------------------------------------------
 
 #Option 3:
@@ -158,7 +158,7 @@ for source_table_name in list(tables_to_replicate)[4:]:
         # print(query)
         new_table_name = source_table_name.replace('frontend_public_','') 
         # print(new_table_name)
-        query = f"Select * from {schema_source}.rontend_public_{source_table_name}"
+        query = f"Select * from {schema_source}.frontend_public_{source_table_name}"
   
 
         #___UNCOMMENT BELOW TWO LINES IF THE DATA FILES NEED TO BE REFRESHED____

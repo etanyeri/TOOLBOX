@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.getcwd)
 
 #%%
-path_files = "../DBT_PROJECTS/aw_dbt/models/staging/dimensions/"
+path_files = "../DBT_PROJECTS/project_dbt/models/staging/dimensions/"
 files_to_change = os.listdir(path_files)
 files_to_change
 
