@@ -15,7 +15,7 @@
         "compare",
         "datasets"
     ],
-    "author": "Caleb Bak <caleb.bak@bluegate.io>",
+ 
     "license": "ISC",
     "dependencies": {
         "axios": "^0.21.1",
